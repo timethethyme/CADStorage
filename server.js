@@ -77,7 +77,7 @@ app.post('/upload', (req, res) => {
                 console.log(req.body);
 
 
-                const data = { recipeName: req.body.recipeName, recipeDescription: req.body.recipeDescription, imageUrl: "uploads/" + req.file.filename };
+                const data = { recipeName: req.body.recipeName, recipeIngredients: req.body.recipeIngredients, recipeDescription: req.body.recipeDescription, imageUrl: "uploads/" + req.file.filename };
                 db.collection('Recipes').save(data, (err, result) => {
                     if (err) return console.log(err);
                     console.log('saved to database');
