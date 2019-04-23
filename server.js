@@ -35,7 +35,7 @@ var upload = multer({
     fileFilter: function(req, file, cb){
         checkFileType(file, cb);
     }
-}).single('recipeBlog');
+}).single('myImage');
 
 // Check File Type
 function checkFileType(file, cb){
