@@ -11,7 +11,7 @@ var multerS3 = require('multer-s3');
 const MongoClient = require('mongodb').MongoClient;
 
 var db;
-MongoClient.connect('mongodb://localhost:27017', (err, client) => {
+MongoClient.connect('mongodb://193.196.52.59:27017', (err, client) => {
     if (err) return console.log(err);
     db = client.db('CADStorage')
 });
